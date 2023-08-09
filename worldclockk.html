@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="timebox1">
+        <h1>India</h1>
+        <p id="indiaTime"></p>
+    </div>
+
+
+    <div class="timebox2">
+        <h1>London</h1>
+        <p id="londonTime"></p>
+    </div>
+
+
+
+    <div class="timebox3">
+        <h1>New York</h1>
+        <p id="YorkTime"></p>
+    </div>
+
+
+    <script>
+     var getIndiaTime = function()
+     {
+        document.getElementById("indiaTime").innerHTML=  new Date().toLocaleString("en-us",{timeZone:'Asia/kolkata',timeStyle:'medium',hourCycle:'h24'});
+     }
+     getIndiaTime();
+     setInterval(getIndiaTime,1000);
+
+
+
+     var getlondonTime = function()
+     {
+        document.getElementById("londonTime").innerHTML=  new Date().toLocaleString("en-us",{timeZone:'Europe/London',timeStyle:'medium',hourCycle:'h24'});
+     }
+     getlondonTime();
+     setInterval(getlondonTime,1000);
+
+
+     var getYorkTime = function()
+     {
+        document.getElementById("YorkTime").innerHTML=  new Date().toLocaleString("en-us",{timeZone:'America/New_York',timeStyle:'medium',hourCycle:'h24'});
+     }
+     getYorkTime();
+     setInterval(getYorkTime,1000);
+    
+    </script>
+</body>
+</html>
